@@ -1,0 +1,63 @@
+<div class="container-fluid">
+
+  <div class="row justify-content-center">
+    <div class="col-md-12 col-centered">
+      <h1>ScamBurger</h1>
+    </div>
+  </div>
+  <br>
+  <div class="row justify-content-center">
+    <div class="col-md-12 col-centered">
+      <img class="img-fluid" src="https://timedotcom.files.wordpress.com/2015/05/mcdonalds-hamburglar-close-up-shot-two.jpg" width="300px">
+    </div>
+    </div>
+  <br>
+  <br>
+
+  <div class="row justify-content-around">
+
+    <div class="col-md-4">
+      <h3>Burgers Not Eaten</h3>
+      <ul>
+        {{#each burgers}}
+        {{#unless burger_eaten}}
+        {{> burgers/burger-block beaten=1}}
+        {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
+
+    <div class="col-md-4">
+      <h2>Add a Burger</h2>
+      <form class="create-form">
+
+        <div class="form-group">
+          <label for="burg">Burger Name:</label>
+          <input type="text" id="burg" name="name">
+        </div>
+
+        <div class="form-group">
+          <label for="is-eaten">Has it been eaten?</label><br>
+          <input type="radio" name="is-eaten" value="1" checked> Eaten!<br>
+          <input type="radio" name="is-eaten" value="0"> Not Eaten.
+        </div>
+
+        <button class="btn btn-dark btn-lg" type="submit">Add A Burger</button>
+      </form>
+    </div>
+
+    <div class="col-md-4" id="devoured">
+      <h3>Burgers Eaten</h3>
+      <ul>
+        {{#each burgers}}
+        {{#if burger_eaten}}
+        {{> burgers/burger-block beaten=0}}
+        {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+
+  </div>
+
+
+</div>

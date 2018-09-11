@@ -1,0 +1,53 @@
+/* Custom CSS */
+body {
+  background: url("../img/cream_pixels.png");
+}
+
+li {
+  padding: 5px;
+  margin: 5px;
+  background: #f8c582b2;
+}
+
+label {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+.create-update-form {
+  padding: 5px;
+  margin: 5px;
+  background: aqua;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
+
+.col-md-12 {
+  text-align: center;
+}
+
+.btn-sm {
+  font-size: 12px;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h2, h3 {
+  text-align: center;
+  font-weight: 800;
+}
+
+#p {
+  font-size: 1.4em;
+  font-family: 'Gamja Flower', cursive;
+}
+
+#devoured {
+  opacity: 0.8;
+}
